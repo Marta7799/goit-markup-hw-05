@@ -66,8 +66,11 @@
           <h1 class="effects-title">
             EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU
           </h1>
-          <button class="effects-button" type="button">Zamów usługe</button>
+          <button class="effects-button" type="button" data-modal-open>Zamów usługe</button>
         </div>
+           <div class="modal is-hidden" data-modal>
+      <button class="modal-close" data-modal-close>X</button>
+    </div>
       </section>
       <!--STRENGTHS-->
       <section class="strengths section">
@@ -137,6 +140,7 @@
                 width="370"
                 height="294"
               />
+              <h3 class="doing-img-title">Aplikacje komputerowe</h3>
             </li>
             <li class="doing-item">
               <img
@@ -146,6 +150,7 @@
                 width="370"
                 height="294"
               />
+              <h3 class="doing-img-title">Aplikacje mobilne</h3>
             </li>
             <li class="doing-item">
               <img
@@ -155,6 +160,7 @@
                 width="370"
                 height="294"
               />
+              <h3 class="doing-img-title">Rozwiązania graficzne</h3>
             </li>
           </ul>
         </div>
@@ -448,5 +454,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
