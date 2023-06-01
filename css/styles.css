@@ -309,9 +309,9 @@ a {
 .doing-img-title {
   position: absolute;
   z-index: 1;
-  top: 224px;
-  margin: 0;
+  bottom: 0;
   font-size: 14px;
+  font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -320,7 +320,6 @@ a {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 27px, 90px;
   height: 70px;
   background-color: rgba(47, 48, 58, 0.8);
 }
@@ -347,9 +346,6 @@ a {
 .team-list {
   display: flex;
   gap: 30px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
 }
 .team-info {
   padding-top: 30px;
@@ -386,6 +382,8 @@ a {
   justify-content: center;
   color: #afb1b8;
   border-radius: 50%;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socialmedia {
   fill: currentColor;
@@ -394,7 +392,6 @@ a {
 .team-link:focus {
   color: #ffffff;
   background-color: #2196f3;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-title {
   font-weight: 700;
@@ -420,11 +417,11 @@ a {
   color: var(--icon-color);
   border: 1px solid currentColor;
   border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:hover,
 .clients-link:focus {
   color: var(--acent-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* footer */
@@ -449,20 +446,20 @@ a {
   font-style: normal;
   margin-top: 20px;
 }
+.address-item {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .address-link:hover,
 .address-link:focus {
   color: var(--acent-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-mail:hover,
 address-mail:focus {
   color: var(--acent-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-tel:hover,
 address-tel:focus {
   color: var(--acent-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-item:not(:last-child) {
   margin-bottom: 9px;
@@ -515,12 +512,13 @@ address-tel:focus {
   border: 1px solid transparent;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-link:focus,
 .footer-link:hover {
   fill: #ffffff;
   background-color: #2196f3;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-wrap {
   display: flex;
@@ -544,15 +542,16 @@ address-tel:focus {
   background: #f5f4fa;
   border-radius: 4px;
   padding: 6px 22px 6px 22px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .portfolio-button:hover,
 .portfolio-button:focus {
   background-color: var(--acent-color);
   color: var(--secondary-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-img-list {
   display: flex;
@@ -565,10 +564,10 @@ address-tel:focus {
 .portfolio-link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-link {
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .box {
   position: relative;
@@ -585,7 +584,7 @@ address-tel:focus {
   right: 0;
   position: absolute;
   transform: translatey(100%);
-  transition: transform 250ms ease-in-out;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .overlay p {
   color: #ffffff;
@@ -596,7 +595,8 @@ address-tel:focus {
   letter-spacing: 0.03em;
   background-color: rgba(33, 150, 243, 0.9);
 }
-.box:hover .overlay {
+.portfolio-link:hover .overlay,
+.portfolio-link:focus .overlay {
   transform: translatey(0);
 }
 .border-portfolio {
